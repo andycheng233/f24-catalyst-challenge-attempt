@@ -24,8 +24,26 @@ todoList = [
 ];
  */
 function deleteTodo(index) {
-    console.log("Before: " + todoList)
-    // YOUR CODE HERE
+    console.log("Before: " + todoList);
+
+    if(index + 1 > todoList.length)
+    {
+        console.error("This index does not exist!");
+        return;
+    }
+
+    temp = []
+    len = todoList.length
+    for(let i = index; i < len; i++)
+        temp.push(todoList.pop());
+
+    temp.pop();
+
+    len = temp.length
+
+    for(let i = 0; i < len; i++)
+        todoList.push(temp.pop());
+
     console.log("After:" + todoList)
 }
 
@@ -35,7 +53,7 @@ function deleteTodo(index) {
  * we do it here
  */
 function mainTask2() {
-    deleteTodo(0);
+    deleteTodo(3);
 }
 
 // This bit of code ensures that a main method exists! If it doesn't, then it throws an error

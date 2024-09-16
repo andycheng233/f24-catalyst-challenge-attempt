@@ -53,7 +53,7 @@ function deleteTodo(index) {
  * we do it here
  */
 function mainTask2() {
-    deleteTodo(3);
+    deleteTodo(0);
 }
 
 // This bit of code ensures that a main method exists! If it doesn't, then it throws an error
